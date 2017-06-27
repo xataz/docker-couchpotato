@@ -1,0 +1,23 @@
+#!/bin/sh
+
+addgroup -g ${GID} couch && adduser -h /home/couch -s /bin/sh -D -G couch -u ${UID} couch
+
+if [ ! -f /config/config.ini ]
+then
+    if [ -z ${APIKEY} ]; then
+        APIKEY=$(date +%s | md5sum | head -c 32)
+    fi
+    mv /tmp/config.ini /config/config.ini
+    sed -i "s|<webroot>|"${WEBROOT}"|" /config/config.ini
+    sed -i "s|<apikey>|"${APIKEY}"|" /config/config.ini
+fi
+
+
+mkdir -p /config/data
+chown -R couch:couch /config /CouchPotatoServer /etc/s6.d
+
+if [ '$@' == '' ]; then
+    exec su-exec couch:couch /bin/s6-svscan /etc/s6.d
+else
+    exec su-exec couch:couch "$@"
+fi
