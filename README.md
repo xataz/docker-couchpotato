@@ -1,10 +1,14 @@
 ![CouchPotato](http://couchpota.to/media/images/full.png)
 
+[![Build Status](https://drone.xataz.net/api/badges/xataz/docker-couchpotato/status.svg)](https://drone.xataz.net/xataz/docker-couchpotato)
+[![](https://images.microbadger.com/badges/image/xataz/couchpotato.svg)](https://microbadger.com/images/xataz/couchpotato "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/xataz/couchpotato.svg)](https://microbadger.com/images/xataz/couchpotato "Get your own version badge on microbadger.com")
+
 > This image is build and push with [drone.io](https://github.com/drone/drone), a circle-ci like self-hosted.
 > If you don't trust, you can build yourself.
 
 ## Tag available
-* latest [(Dockerfile)](https://github.com/xataz/dockerfiles/tree/master/couchpotato/Dockerfile)
+* latest [(Dockerfile)](https://github.com/xataz/docker-couchpotato)
 
 ## Description
 What is [CouchPotato](https://github.com/RuudBurger/CouchPotatoServer) ?
