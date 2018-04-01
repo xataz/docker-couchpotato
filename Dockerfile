@@ -7,8 +7,8 @@ ENV WEBROOT="" \
 LABEL description="Couchpotato based on alpine" \
       tags="latest" \
       maintainer="xataz <https://github.com/xataz>" \
-      build_ver="201802220330" \
-      commit="dae7327d35773c9eb62689c4609d8465abb31dea"
+      build_ver="201804010600" \
+      commit="12ca4c22680961346e0aa2617941bf1a7252fc67"
 
 RUN export BUILD_DEPS="py2-pip \
                     build-base \
